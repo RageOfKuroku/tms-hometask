@@ -1,5 +1,4 @@
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 public class Loop {
     public static void main(String[] args) {
@@ -11,7 +10,7 @@ public class Loop {
             if(i % 2 == 1)
             {
                 System.out.print(i + " ");
-                continue;
+
             }
         }
 
@@ -21,7 +20,7 @@ public class Loop {
         for(int j = 5; j > 0 ; j--)
         {
             System.out.print(j + " ");
-            continue;
+
         }
 
         /*3. Напишите программу, где пользователь вводит любое целое
