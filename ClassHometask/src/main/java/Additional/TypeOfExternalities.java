@@ -1,6 +1,6 @@
 package Additional;
 
-public enum TypeOfExterniti {
+public enum TypeOfExternalities {
 
     EXTERNAL,
     INTERNAL

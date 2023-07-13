@@ -4,12 +4,12 @@ public class HDD {
 
     private String name;
     private int value;
-    private TypeOfExterniti isExternal;
+    private TypeOfExternalities isExternal;
 
     public HDD() {
     }
 
-    public HDD(String name, int value, TypeOfExterniti isExternal) {
+    public HDD(String name, int value, TypeOfExternalities isExternal) {
         this.name = name;
         this.value = value;
         this.isExternal = isExternal;

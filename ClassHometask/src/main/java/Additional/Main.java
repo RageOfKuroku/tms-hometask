@@ -3,8 +3,8 @@ package Additional;
 public class Main {
     public static void main(String[] args) {
         Computer computer1 = new Computer(1500, "Dota2PC");
-        Computer computer2 = new Computer(2500, "Dota2PROpc", new HDD("ScytheOfVyse", 500, TypeOfExterniti.INTERNAL), new RAM("BootsOfTravel", 16));
-        Computer computer3 = new Computer(2500, "Dota2PROpcMega", new HDD("EyeOfScadi", 1000, TypeOfExterniti.EXTERNAL), new RAM("ScrollOfTeleportation", 64));
+        Computer computer2 = new Computer(2500, "Dota2PROpc", new HDD("ScytheOfVyse", 500, TypeOfExternalities.INTERNAL), new RAM("BootsOfTravel", 16));
+        Computer computer3 = new Computer(2500, "Dota2PROpcMega", new HDD("EyeOfScadi", 1000, TypeOfExternalities.EXTERNAL), new RAM("ScrollOfTeleportation", 64));
 
 
         computer1.toString();
