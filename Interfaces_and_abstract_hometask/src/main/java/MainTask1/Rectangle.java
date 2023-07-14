@@ -15,4 +15,7 @@ public class Rectangle extends Figure{
         System.out.println("Прямоугольник - периметр");
         return (side1+side2)*2;
     }
+    public double perimeter1(){
+        return (side1+side2)*2;
+    }
 }

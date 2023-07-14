@@ -14,4 +14,7 @@ public class Circle extends Figure{
         System.out.println("Круг - периметр");
         return 2 * Math.PI * radius;
     }
+    public double perimeter1(){
+        return 2 * Math.PI * radius;
+    }
 }

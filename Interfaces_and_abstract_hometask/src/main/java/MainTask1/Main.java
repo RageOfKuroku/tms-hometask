@@ -7,6 +7,7 @@ public class Main {
         Figure figure3 = new Triangle(15,15,16,15);
         Figure figure4 = new Circle(20);
         Figure figure5 = new Rectangle(16,16);
+        int sumOfPerimeters = 0;
 
         Figure[] figures = {figure1,figure2,figure3,figure4,figure5};
         System.out.println("Периметры: ");
@@ -17,6 +18,10 @@ public class Main {
         for (Figure figure: figures) {
             System.out.println(figure.square() + "\n");
         }
+        for(int i = 0; i < figures.length; i++) {
+            sumOfPerimeters += figures[i].perimeter1();
+        }
+        System.out.println("Сумма всех периметров равна: " + sumOfPerimeters);
     }
 
 

@@ -20,4 +20,7 @@ public class Triangle extends Figure{
         System.out.println("Треугольник - периметр");
         return side1 + side2 + side3;
     }
+    public double perimeter1(){
+        return side1 + side2 + side3;
+    }
 }
