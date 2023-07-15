@@ -8,6 +8,10 @@ public class FinancialInvoice extends Document {
     private int codeOfDepartment;
     private int finalMonthSum;
 
+    public FinancialInvoice(Date dateOfDocument, int numberOfDocument) {
+        super(dateOfDocument, numberOfDocument);
+    }
+
     public FinancialInvoice(Date dateOfDocument, int numberOfDocument, int codeOfDepartment, int finalMonthSum) {
         super(dateOfDocument, numberOfDocument);
         this.codeOfDepartment = codeOfDepartment;

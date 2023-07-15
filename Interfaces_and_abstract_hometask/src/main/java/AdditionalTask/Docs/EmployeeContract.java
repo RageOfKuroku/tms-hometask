@@ -10,6 +10,11 @@ public class EmployeeContract extends Document {
         this.dateOfExpire = dateOfExpire;
         this.nameOfEmployee = nameOfEmployee;
     }
+
+    public EmployeeContract(Date dateOfDocument, int numberOfDocument) {
+        super(dateOfDocument, numberOfDocument);
+    }
+
     private Date dateOfExpire;
     private String nameOfEmployee;
     @Override

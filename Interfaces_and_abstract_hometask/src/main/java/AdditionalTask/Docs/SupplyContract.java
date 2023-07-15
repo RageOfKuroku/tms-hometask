@@ -9,6 +9,10 @@ public class SupplyContract extends Document {
     typeOfGood typeOfGoods;
     int amountOfGoods;
 
+    public SupplyContract(Date dateOfDocument, int numberOfDocument) {
+        super(dateOfDocument, numberOfDocument);
+    }
+
     public SupplyContract(Date dateOfDocument, int numberOfDocument, typeOfGood typeOfGoods, int amountOfGoods) {
         super(dateOfDocument, numberOfDocument);
         this.typeOfGoods = typeOfGoods;
