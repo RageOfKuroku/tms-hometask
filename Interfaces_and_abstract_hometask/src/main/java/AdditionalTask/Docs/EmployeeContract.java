@@ -12,7 +12,7 @@ public class EmployeeContract extends Document {
     }
     private Date dateOfExpire;
     private String nameOfEmployee;
-    @Override
+
     public void infoAboutDoc(){
         System.out.println("Документ №" + numberOfDocument + "\n" + "Сотрудник: " + nameOfEmployee + "\n" + "Окончание контракта: " + dateOfExpire + "\n" + "Дата: " + dateOfDocument);
     }
