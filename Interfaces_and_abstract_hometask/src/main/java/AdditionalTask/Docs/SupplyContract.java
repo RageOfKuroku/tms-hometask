@@ -14,7 +14,7 @@ public class SupplyContract extends Document {
         this.typeOfGoods = typeOfGoods;
         this.amountOfGoods = amountOfGoods;
     }
-
+    @Override
     public void infoAboutDoc() {
         System.out.println("Документ №" + numberOfDocument + "\n" + "Тип товара: " + typeOfGoods + "\n" + "Количество товара: " + amountOfGoods + "\n" + "Дата: " + dateOfDocument);
     }
