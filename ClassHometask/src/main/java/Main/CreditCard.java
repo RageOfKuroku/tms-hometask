@@ -1,5 +1,3 @@
-package Main;
-
 public class CreditCard {
     private int accountNumber;
     private int presentSum;
@@ -8,23 +6,28 @@ public class CreditCard {
         this.accountNumber = accountNumber;
         this.presentSum = presentSum;
     }
-
-    public void setPresentSum(int presentSum) {
-        this.presentSum = presentSum;
+    public void minusSum(int number)
+    {
+        presentSum-=number;
     }
-
-
-
-    public int getPresentSum() {
-        return presentSum;
+    public void plusSum(int number)
+    {
+        presentSum+=number;
     }
-
-
-    public void ReadInfo()
+    public void readInfo()
     {
         System.out.println("Номер счёта:" + accountNumber);
         System.out.println("Текущий баланс:" + presentSum + " руб");
     }
+    public void checkingSum(int second, int checkNumber)
+    {
+        if(second > presentSum)
+        {
+            System.out.println("Нехватка средств, пожалуйста, пополните баланс");
+            CardUser.account(checkNumber);
+        }
+    }
+
 
 
 
