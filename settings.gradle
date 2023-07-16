@@ -4,4 +4,5 @@ include 'Classes_homework'
 include 'Classes_homework:AdditionalTask'
 findProject(':Classes_homework:AdditionalTask')?.name = 'AdditionalTask'
 include 'ClassHometask'
+include 'Check'
 
