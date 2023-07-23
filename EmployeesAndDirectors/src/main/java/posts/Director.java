@@ -20,6 +20,16 @@ public class Director extends Employee {
         }
         return count;
     }
+    public void addEmployee(Employee... sourceEmployee) {
+        for (Employee employee : sourceEmployee) {
+            for (int i = 0; i < employees.length; i++) {
+                if (employees[i] == null) {
+                    employees[i] = employee;
+                    break;
+                }
+            }
+        }
+    }
 
     @Override
     public double countingSalary() {

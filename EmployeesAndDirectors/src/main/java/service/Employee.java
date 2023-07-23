@@ -19,16 +19,7 @@ public abstract class Employee {
         return basePost * post.getCoeffisients() * workExp;
     }
 
-    public void addEmployee(Employee... sourceEmployee) {
-        for (Employee employee : sourceEmployee) {
-            for (int i = 0; i < employees.length; i++) {
-                if (employees[i] == null) {
-                    employees[i] = employee;
-                    break;
-                }
-            }
-        }
-    }
+
 
 
 }

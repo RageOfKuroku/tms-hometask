@@ -8,13 +8,13 @@ import service.InfoAboutDirector;
 public class Main {
     public static void main(String[] args) {
 
-        Employee director = new Director("Egor", "Efimenko", 15);
-        Employee director1 = new Director("Elon", "Musk", 30);
-        Employee director2 = new Director("George", "Washington", 20);
-        Employee work1 = new Worker("Allah", "Muhhamed", 20);
-        Employee work2 = new Worker("Abdul", "Babul", 20);
-        Employee work3 = new Worker("Ahmed", "Rahmed", 20);
-        Employee work4 = new Worker("Azamat", "Taliev", 15);
+        Director director = new Director("Egor", "Efimenko", 15);
+        Director director1 = new Director("Elon", "Musk", 30);
+        Director director2 = new Director("George", "Washington", 20);
+        Worker work1 = new Worker("Allah", "Muhhamed", 20);
+        Worker work2 = new Worker("Abdul", "Babul", 20);
+        Worker work3 = new Worker("Ahmed", "Rahmed", 20);
+        Worker work4 = new Worker("Azamat", "Taliev", 15);
 
 
         director.addEmployee(work1, work2);
