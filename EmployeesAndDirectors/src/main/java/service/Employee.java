@@ -9,10 +9,9 @@ public abstract class Employee {
 
     public Employee[] employees = new Employee[15];
 
-    public Employee(String name, String surname, Post post, int workExp) {
+    public Employee(String name, String surname, int workExp) {
         this.name = name;
         this.surname = surname;
-        this.post = post;
         this.workExp = workExp;
     }
 

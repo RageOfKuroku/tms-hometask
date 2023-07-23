@@ -8,13 +8,13 @@ import service.Post;
 public class Main {
     public static void main(String[] args) {
 
-        Employee director = new Director("Egor", "Efimenko", Post.DIRECTOR, 15);
-        Employee director1 = new Director("Elon", "Musk", Post.DIRECTOR, 30);
-        Employee director2 = new Director("George", "Washington", Post.DIRECTOR, 20);
-        Employee work1 = new Worker("Allah", "Muhhamed", Post.WORKER, 20);
-        Employee work2 = new Worker("Abdul", "Babul", Post.WORKER, 20);
-        Employee work3 = new Worker("Ahmed", "Rahmed", Post.WORKER, 20);
-        Employee work4 = new Worker("Azamat", "Taliev", Post.WORKER, 15);
+        Employee director = new Director("Egor", "Efimenko", 15);
+        Employee director1 = new Director("Elon", "Musk", 30);
+        Employee director2 = new Director("George", "Washington", 20);
+        Employee work1 = new Worker("Allah", "Muhhamed", 20);
+        Employee work2 = new Worker("Abdul", "Babul", 20);
+        Employee work3 = new Worker("Ahmed", "Rahmed", 20);
+        Employee work4 = new Worker("Azamat", "Taliev", 15);
 
 
         director.addEmployee(work1, work2);

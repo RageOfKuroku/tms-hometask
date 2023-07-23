@@ -4,8 +4,10 @@ import service.Employee;
 import service.Post;
 
 public class Worker extends Employee {
-    public Worker(String name, String surname, Post post, int workExp) {
-        super(name, surname, post, workExp);
+    public Worker(String name, String surname, int workExp) {
+        super(name, surname, workExp);
+        this.post = Post.WORKER;
+
     }
 
     public String toString() {

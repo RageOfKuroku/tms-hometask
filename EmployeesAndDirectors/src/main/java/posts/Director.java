@@ -4,8 +4,11 @@ import service.Employee;
 import service.Post;
 
 public class Director extends Employee {
-    public Director(String name, String surname, Post post, int workExp) {
-        super(name, surname, post, workExp);
+
+
+    public Director(String name, String surname, int workExp) {
+        super(name, surname, workExp);
+        this.post = Post.DIRECTOR;
     }
 
     private int countWorkers() {
