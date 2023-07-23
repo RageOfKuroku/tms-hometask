@@ -1,7 +1,5 @@
 package service;
 
-import posts.Director;
-import posts.Worker;
 
 
 public abstract class InfoAboutDirector {

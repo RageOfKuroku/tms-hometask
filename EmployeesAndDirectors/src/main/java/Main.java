@@ -3,7 +3,7 @@ import posts.Worker;
 import service.Employee;
 import service.EmployeeSearch;
 import service.InfoAboutDirector;
-import service.Post;
+
 
 public class Main {
     public static void main(String[] args) {
