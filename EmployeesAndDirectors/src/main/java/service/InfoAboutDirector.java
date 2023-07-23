@@ -6,28 +6,27 @@ import posts.Worker;
 
 public abstract class InfoAboutDirector {
 
-    public static void info(Director sourceDirector) {
-        System.out.println(sourceDirector + "\nПодчинённые: ");
-        for (Worker worker : sourceDirector.workers) {
-            if (worker != null) {
-                System.out.println(worker);
+    public static void info(Employee sourceDirector) {
+
+        if (sourceDirector.post == Post.DIRECTOR) {
+            System.out.println("-------------------------------------------------------------");
+            System.out.println(sourceDirector + "\nПодчинённые: ");
+        }
+        for (Employee employee : sourceDirector.employees) {
+            if (employee != null && sourceDirector.post == Post.DIRECTOR) {
+                System.out.println(employee);
             }
         }
-        for(Director director : sourceDirector.directors) {
-            if(director != null) {
-                System.out.println(director);
-            }
-        }
+
 
     }
 
-    public static void infoFromDirector(Director sourceDirector) {
+    public static void infoFromDirector(Employee sourceDirector) {
         info(sourceDirector);
-        System.out.println("-------------------------------------------------------------");
-        for(Director director : sourceDirector.directors) {
-            if(director != null) {
-                infoFromDirector(director);
-            }else break;
+        for (Employee employee : sourceDirector.employees) {
+            if (employee != null) {
+                infoFromDirector(employee);
+            } else break;
 
         }
 
