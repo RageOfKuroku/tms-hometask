@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -9,6 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ArraysHometask" />
+            <option value="$PROJECT_DIR$/ClassHometask" />
+            <option value="$PROJECT_DIR$/Classes_homework" />
+            <option value="$PROJECT_DIR$/Classes_homework/AdditionalTask" />
             <option value="$PROJECT_DIR$/Interfaces_and_abstract_hometask" />
           </set>
         </option>
