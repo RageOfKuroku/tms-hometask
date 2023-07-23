@@ -25,9 +25,8 @@ public class Main {
         InfoAboutDirector.infoFromDirector(director);
 
         System.out.println("Проверка на наличие сотрудника: ");
-        System.out.println(EmployeeSearch.search(director, "Allah"));
-        System.out.println(EmployeeSearch.search(director, "Ahmed"));
-        System.out.println(EmployeeSearch.search(director1, "Egor"));
+        System.out.println(EmployeeSearch.search(director, "Azamat")); // Возвращает true(т.к все работники являются подчинёнными Egor(director))
+        System.out.println(EmployeeSearch.search(director2, "Ahmed")); // Возвращает false(Ahmed(work3) не является подчинённым George(director2))
 
 
     }
