@@ -9,8 +9,10 @@ public class Register {
     }
 
     public void aboutDocs() {
-        for (int i = 0; i < index; i++) {
-            docs[i].infoAboutDoc();
+        for (Document doc: docs) {
+            if(doc != null){
+                doc.infoAboutDoc();
+            }
         }
     }
 }
