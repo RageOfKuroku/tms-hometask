@@ -57,4 +57,13 @@ public class WorkWithStringService {
             System.out.println("Строка не начинается последовательности чисел " + checker);
         }
     }
+
+    public static void checkEndString(String userString) {
+        String endString = "1a2b";
+        if(userString.endsWith(endString)) {
+            System.out.println("Строка заканчивается на последовательность " + endString);
+        }else {
+            System.out.println("Строка не заканчивается на последовательность " + endString);
+        }
+    }
 }
