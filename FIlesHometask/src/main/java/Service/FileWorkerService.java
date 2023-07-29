@@ -29,9 +29,7 @@ public class FileWorkerService {
                 }
                 str = reader.readLine();
             }
-        } catch (FileNotFoundException ex) {
-            System.out.println("Something went wrong with file founding");
-        } catch (IOException ex) {
+        }catch (IOException ex) {
             System.out.println("Something went wrong with I/O");
         }
 
