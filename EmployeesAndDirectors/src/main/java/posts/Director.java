@@ -4,7 +4,7 @@ import service.Employee;
 import service.Post;
 
 public class Director extends Employee {
-
+    public Employee[] employees = new Employee[15];
 
     public Director(String name, String surname, int workExp) {
         super(name, surname, workExp);
@@ -20,6 +20,7 @@ public class Director extends Employee {
         }
         return count;
     }
+
     public void addEmployee(Employee... sourceEmployee) {
         for (Employee employee : sourceEmployee) {
             for (int i = 0; i < employees.length; i++) {
@@ -38,6 +39,11 @@ public class Director extends Employee {
 
     @Override
     public String toString() {
-        return "\nДолжность: " + post + "\nФио: " + name + " " + surname + "\nКоличество подчинённых: " + countWorkers() + " человек" + "\nСтаж работы: " + workExp + " лет" + "\n" + "Заработная плата: " + countingSalary();
+        return "\nДолжность: " + post +
+                "\nФио: " + name + " " + surname +
+                "\nКоличество подчинённых: " + countWorkers() + " человек" +
+                "\nСтаж работы: " + workExp + " лет" + "\n" +
+                "Заработная плата: " + countingSalary();
+
     }
 }

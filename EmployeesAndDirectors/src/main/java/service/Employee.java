@@ -7,8 +7,6 @@ public abstract class Employee {
     public int workExp;
     public double basePost = 1.5;
 
-    public Employee[] employees = new Employee[15];
-
     public Employee(String name, String surname, int workExp) {
         this.name = name;
         this.surname = surname;
@@ -18,8 +16,4 @@ public abstract class Employee {
     public double countingSalary() {
         return basePost * post.getCoeffisients() * workExp;
     }
-
-
-
-
 }

@@ -1,47 +1,29 @@
 package service;
 
+import posts.Director;
 
 public class EmployeeSearch {
-    public static boolean search(Employee sourceDirector, String name) {
-        return searchWorker(sourceDirector, name) || searchDirector(sourceDirector, name);
+    public static boolean searchByName(Director sourceDirector, String name) {
+        return searchEmployeeByName(sourceDirector, name);
     }
 
-    private static boolean searchWorker(Employee employee, String name) {
+    private static boolean searchEmployeeByName(Employee employee, String name) {
         if (employee == null) {
             return false;
         }
 
-        if (employee.post.equals(Post.WORKER) && employee.name.equals(name)) {
+        if (employee.name.equals(name)) {
             return true;
         }
 
-        for (Employee subordinate : employee.employees) {
-            if (searchWorker(subordinate, name)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private static boolean searchDirector(Employee employee, String name) {
-        if (employee == null) {
-            return false;
-        }
-
-        if (employee.post.equals(Post.DIRECTOR) && employee.name.equals(name)) {
-            return true;
-        }
-
-        for (Employee subordinate : employee.employees) {
-            if (searchDirector(subordinate, name)) {
-                return true;
+        if (employee instanceof Director director) {
+            for (Employee subordinate : director.employees) {
+                if (searchEmployeeByName(subordinate, name)) {
+                    return true;
+                }
             }
         }
 
         return false;
     }
 }
-
-
-
