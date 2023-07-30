@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/EmployeesAndDirectors" />
             <option value="$PROJECT_DIR$/ArraysHometask" />
             <option value="$PROJECT_DIR$/Check" />
             <option value="$PROJECT_DIR$/ClassHometask" />
