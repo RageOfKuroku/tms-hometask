@@ -3,33 +3,28 @@ package mainTask.list;
 import java.util.Arrays;
 
 public class ArrayListParody<T> {
+    private static final int DEFAULT_CAPACITY = 10;
     private Object[] elements;
     private int size;
-    private static final int DEFAULT_CAPACITY = 10;
 
     public ArrayListParody() {
-        elements = new Object[DEFAULT_CAPACITY];
+        this(DEFAULT_CAPACITY);
     }
 
-
     public ArrayListParody(int initialCapacity) {
-        if (initialCapacity < 0)
+        if (initialCapacity < 0) {
             throw new IllegalArgumentException("Illegal Capacity: " + initialCapacity);
+        }
         elements = new Object[initialCapacity];
     }
 
-
     public T get(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-        }
+        checkIndex(index);
         return (T) elements[index];
     }
 
     public void add(T element) {
-        if (size == elements.length) {
-            resize();
-        }
+        ensureCapacity();
         elements[size++] = element;
     }
 
@@ -43,9 +38,7 @@ public class ArrayListParody<T> {
     }
 
     public void remove(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-        }
+        checkIndex(index);
         int numMoved = size - index - 1;
         if (numMoved > 0)
             System.arraycopy(elements, index + 1, elements, index, numMoved);
@@ -63,9 +56,16 @@ public class ArrayListParody<T> {
         return size;
     }
 
-    private void resize() {
-        int newSize = elements.length * 2;
-        elements = Arrays.copyOf(elements, newSize);
+    private void ensureCapacity() {
+        if (size == elements.length) {
+            int newSize = elements.length * 2;
+            elements = Arrays.copyOf(elements, newSize);
+        }
     }
 
+    private void checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+    }
 }
