@@ -9,5 +9,5 @@ include 'Interfaces_and_abstract_hometask'
 include 'PhoneHometask'
 include 'StringHometask'
 include 'FIlesHometask'
-
+include 'LambdaHometask'
 
