@@ -10,5 +10,7 @@ include 'EmployeesAndDirectors'
 include 'PhoneHometask'
 include 'StringHometask'
 include 'FIlesHometask'
+include 'LambdaHometask'
 include 'CollectionsHometask'
+
 
