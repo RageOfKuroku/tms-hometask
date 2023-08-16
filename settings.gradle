@@ -6,9 +6,18 @@ findProject(':Classes_homework:AdditionalTask')?.name = 'AdditionalTask'
 include 'ClassHometask'
 include 'Check'
 include 'Interfaces_and_abstract_hometask'
+
+
+include 'EmployeesAndDirectors'
+
 include 'PhoneHometask'
 include 'StringHometask'
 include 'FIlesHometask'
 include 'LambdaHometask'
+
 include 'DateHometask'
+
+include 'CollectionsHometask'
+
+
 
