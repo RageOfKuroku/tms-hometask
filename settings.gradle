@@ -1,2 +1,3 @@
 rootProject.name = 'lesson1'
+include 'ThreadsHometask'
 
