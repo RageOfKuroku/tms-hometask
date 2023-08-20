@@ -11,6 +11,10 @@
             <option value="$PROJECT_DIR$" />
 
 
+
+            <option value="$PROJECT_DIR$/ThreadsHometask" />
+
+
             <option value="$PROJECT_DIR$/EmployeesAndDirectors" />
 
             <option value="$PROJECT_DIR$/ArraysHometask" />
@@ -26,7 +30,7 @@
             <option value="$PROJECT_DIR$/Interfaces_and_abstract_hometask" />
             <option value="$PROJECT_DIR$/LambdaHometask" />
             <option value="$PROJECT_DIR$/PhoneHometask" />
-            <option value="$PROJECT_DIR$/StringHometask" />
+
           </set>
         </option>
       </GradleProjectSettings>
