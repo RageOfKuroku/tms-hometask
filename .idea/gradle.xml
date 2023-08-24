@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/Interfaces_and_abstract_hometask" />
             <option value="$PROJECT_DIR$/PhoneHometask" />
             <option value="$PROJECT_DIR$/StringHometask" />
+            <option value="$PROJECT_DIR$/postgreSQL" />
           </set>
         </option>
       </GradleProjectSettings>
