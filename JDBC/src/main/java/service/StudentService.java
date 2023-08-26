@@ -9,59 +9,75 @@ public class StudentService {
 
     public void addStudent(int studentId, String studentName, String cityName) {
         try (Connection conn = DataBaseConnectionConfig.getConnection()) {
-            String checkStudentId = "SELECT id FROM students WHERE id = ?;";
-            try (PreparedStatement pstmt = conn.prepareStatement(checkStudentId)) {
-                pstmt.setInt(1, studentId);
-                ResultSet rs = pstmt.executeQuery();
-                if (rs.next()) {
-                    System.out.println("Студент с идентификатором " + studentId + " уже существует.");
-                    return;
-                }
+            if (studentExists(conn, studentId)) {
+                System.out.println("Студент с идентификатором " + studentId + " уже существует.");
+                return;
             }
 
-            int cityId = -1;
-            String selectCity = "SELECT id FROM cities WHERE name = ?;";
-            try (PreparedStatement pstmt = conn.prepareStatement(selectCity)) {
-                pstmt.setString(1, cityName);
-                ResultSet rs = pstmt.executeQuery();
-                if (rs.next()) {
-                    cityId = rs.getInt("id");
-                }
-            }
-
-
+            int cityId = getCityId(conn, cityName);
             if (cityId == -1) {
-                int maxCityId = 0;
-                String selectMaxCityId = "SELECT MAX(id) FROM cities;";
-                try (Statement stmt = conn.createStatement()) {
-                    ResultSet rs = stmt.executeQuery(selectMaxCityId);
-                    if (rs.next()) {
-                        maxCityId = rs.getInt(1);
-                    }
-                }
-
-                int newCityId = maxCityId + 1;
-
-                String insertCity = "INSERT INTO cities (id, name) VALUES (?, ?);";
-                try (PreparedStatement pstmt = conn.prepareStatement(insertCity)) {
-                    pstmt.setInt(1, newCityId);
-                    pstmt.setString(2, cityName);
-                    pstmt.executeUpdate();
-                    cityId = newCityId;
-                }
+                cityId = addNewCity(conn, cityName);
             }
 
-            String insertStudent = "INSERT INTO students (id, name, cityid) VALUES (?, ?, ?);";
-            try (PreparedStatement pstmt = conn.prepareStatement(insertStudent)) {
-                pstmt.setInt(1, studentId);
-                pstmt.setString(2, studentName);
-                pstmt.setInt(3, cityId);
-                pstmt.executeUpdate();
-            }
+            addStudent(conn, studentId, studentName, cityId);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
+
+    private boolean studentExists(Connection conn, int studentId) throws SQLException {
+        String checkStudentId = "SELECT id FROM students WHERE id = ?;";
+        try (PreparedStatement pstmt = conn.prepareStatement(checkStudentId)) {
+            pstmt.setInt(1, studentId);
+            ResultSet rs = pstmt.executeQuery();
+            return rs.next();
+        }
+    }
+
+    private int getCityId(Connection conn, String cityName) throws SQLException {
+        String selectCity = "SELECT id FROM cities WHERE name = ?;";
+        try (PreparedStatement pstmt = conn.prepareStatement(selectCity)) {
+            pstmt.setString(1, cityName);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("id");
+            }
+        }
+        return -1;
+    }
+
+    private int addNewCity(Connection conn, String cityName) throws SQLException {
+        int maxCityId = 0;
+        String selectMaxCityId = "SELECT MAX(id) FROM cities;";
+        try (Statement stmt = conn.createStatement()) {
+            ResultSet rs = stmt.executeQuery(selectMaxCityId);
+            if (rs.next()) {
+                maxCityId = rs.getInt(1);
+            }
+        }
+
+        int newCityId = maxCityId + 1;
+
+        String insertCity = "INSERT INTO cities (id, name) VALUES (?, ?);";
+        try (PreparedStatement pstmt = conn.prepareStatement(insertCity)) {
+            pstmt.setInt(1, newCityId);
+            pstmt.setString(2, cityName);
+            pstmt.executeUpdate();
+        }
+
+        return newCityId;
+    }
+
+    private void addStudent(Connection conn, int studentId, String studentName, int cityId) throws SQLException {
+        String insertStudent = "INSERT INTO students (id, name, cityid) VALUES (?, ?, ?);";
+        try (PreparedStatement pstmt = conn.prepareStatement(insertStudent)) {
+            pstmt.setInt(1, studentId);
+            pstmt.setString(2, studentName);
+            pstmt.setInt(3, cityId);
+            pstmt.executeUpdate();
+        }
+    }
+
 
 
 
