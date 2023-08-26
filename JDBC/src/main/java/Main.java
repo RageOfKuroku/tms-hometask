@@ -17,8 +17,11 @@ public class Main {
 
         student.updateStudentCity(4,2);
 
-        student.printStudents();
+        student.deleteStudent(3);
 
+        city.deleteCity(3);
+
+        student.printStudents();
         city.printCity();
 
 
