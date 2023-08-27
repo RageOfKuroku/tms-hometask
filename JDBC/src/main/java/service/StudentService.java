@@ -16,10 +16,10 @@ public class StudentService {
                 return;
             }
 
-            List<Integer> cityIds = getCityIds(conn, cityName);
+            List<Integer> cityIds = getCityIdsForStudents(conn, cityName);
             int cityId;
             if (cityIds.isEmpty()) {
-                cityId = addNewCity(conn, cityName);
+                cityId = addNewCityOfStudent(conn, cityName);
             } else {
                 cityId = cityIds.get(0);
             }
@@ -39,7 +39,7 @@ public class StudentService {
         }
     }
 
-    public List<Integer> getCityIds(Connection conn, String cityName) throws SQLException {
+    public List<Integer> getCityIdsForStudents(Connection conn, String cityName) throws SQLException {
         List<Integer> cityIds = new ArrayList<>();
         String sql = "SELECT id FROM cities WHERE name = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -52,7 +52,7 @@ public class StudentService {
         return cityIds;
     }
 
-    private int addNewCity(Connection conn, String cityName) throws SQLException {
+    private int addNewCityOfStudent(Connection conn, String cityName) throws SQLException {
         int maxCityId = 0;
         String selectMaxCityId = "SELECT MAX(id) + 1 FROM cities;";
         try (Statement stmt = conn.createStatement()) {
