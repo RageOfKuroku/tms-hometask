@@ -7,13 +7,24 @@ import java.sql.*;
 public class CityService {
     public void addCity(int cityId, String cityName) {
         try (Connection conn = DataBaseConnectionConfig.getConnection()) {
-
+            // Проверка уникальности идентификатора города
             String checkCityId = "SELECT id FROM cities WHERE id = ?;";
             try (PreparedStatement pstmt = conn.prepareStatement(checkCityId)) {
                 pstmt.setInt(1, cityId);
                 ResultSet rs = pstmt.executeQuery();
                 if (rs.next()) {
                     System.out.println("Город с идентификатором " + cityId + " уже существует.");
+                    return;
+                }
+            }
+
+
+            String checkCityName = "SELECT name FROM cities WHERE name = ?;";
+            try (PreparedStatement pstmt = conn.prepareStatement(checkCityName)) {
+                pstmt.setString(1, cityName);
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()) {
+                    System.out.println("Город с названием " + cityName + " уже существует.");
                     return;
                 }
             }

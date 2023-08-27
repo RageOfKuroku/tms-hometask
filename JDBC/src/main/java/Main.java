@@ -11,7 +11,7 @@ public class Main {
 
         CityService city = new CityService();
 
-        city.addCity(4, "Vologda");
+        city.addCity(8, "Moscow");
 
         student.addStudent(8,"Volodya", "Moscow");
 
@@ -19,7 +19,7 @@ public class Main {
 
         student.deleteStudent(3);
 
-        city.deleteCity(3);
+        city.deleteCity(7);
 
         student.printStudents();
         city.printCity();

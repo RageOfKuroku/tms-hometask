@@ -3,6 +3,8 @@ package service;
 import config.DataBaseConnectionConfig;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class StudentService {
@@ -14,9 +16,12 @@ public class StudentService {
                 return;
             }
 
-            int cityId = getCityId(conn, cityName);
-            if (cityId == -1) {
+            List<Integer> cityIds = getCityIds(conn, cityName);
+            int cityId;
+            if (cityIds.isEmpty()) {
                 cityId = addNewCity(conn, cityName);
+            } else {
+                cityId = cityIds.get(0);
             }
 
             addStudent(conn, studentId, studentName, cityId);
@@ -34,16 +39,17 @@ public class StudentService {
         }
     }
 
-    private int getCityId(Connection conn, String cityName) throws SQLException {
-        String selectCity = "SELECT id FROM cities WHERE name = ?;";
-        try (PreparedStatement pstmt = conn.prepareStatement(selectCity)) {
+    public List<Integer> getCityIds(Connection conn, String cityName) throws SQLException {
+        List<Integer> cityIds = new ArrayList<>();
+        String sql = "SELECT id FROM cities WHERE name = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, cityName);
             ResultSet rs = pstmt.executeQuery();
-            if (rs.next()) {
-                return rs.getInt("id");
+            while (rs.next()) {
+                cityIds.add(rs.getInt("id"));
             }
         }
-        return -1;
+        return cityIds;
     }
 
     private int addNewCity(Connection conn, String cityName) throws SQLException {
@@ -77,8 +83,6 @@ public class StudentService {
             pstmt.executeUpdate();
         }
     }
-
-
 
 
     public void deleteStudent(int studentId) {
@@ -122,6 +126,4 @@ public class StudentService {
             System.out.println(e.getMessage());
         }
     }
-
 }
-
