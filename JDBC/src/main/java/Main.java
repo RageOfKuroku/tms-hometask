@@ -13,9 +13,9 @@ public class Main {
 
         city.addCity(8, "Moscow");
 
-        student.addStudent(8,"Volodya", "Moscow");
+        student.addStudent(10,"KirKir", "Prague");
 
-        student.updateStudentCity(4,2);
+        student.updateStudentCity(9,5);
 
         student.deleteStudent(3);
 

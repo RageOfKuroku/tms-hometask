@@ -54,7 +54,7 @@ public class StudentService {
 
     private int addNewCity(Connection conn, String cityName) throws SQLException {
         int maxCityId = 0;
-        String selectMaxCityId = "SELECT MAX(id) FROM cities;";
+        String selectMaxCityId = "SELECT MAX(id) + 1 FROM cities;";
         try (Statement stmt = conn.createStatement()) {
             ResultSet rs = stmt.executeQuery(selectMaxCityId);
             if (rs.next()) {
