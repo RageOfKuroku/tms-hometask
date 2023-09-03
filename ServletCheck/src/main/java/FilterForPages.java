@@ -1,4 +1,6 @@
 import javax.servlet.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 public class FilterForPages implements Filter {
@@ -11,13 +13,19 @@ public class FilterForPages implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String login = request.getParameter("login");
-        System.out.println("FILTER");
-        if(login != null) {
-            chain.doFilter(request, response);
-        }
+        HttpServletRequest req = (HttpServletRequest) request;
 
-        throw new RuntimeException("put login");
+        Cookie[] cookies = req.getCookies();
+
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getValue().equals("login")) {
+                    chain.doFilter(request, response);
+                }
+            }
+        } else {
+            throw new RuntimeException("Error");
+        }
     }
 
     @Override
