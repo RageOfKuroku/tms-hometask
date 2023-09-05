@@ -19,7 +19,7 @@ public class FilterForPages implements Filter {
 
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-                if (cookie.getValue().equals("login")) {
+                if (cookie.getValue().equals("GetAccessToTheSecretPage")) {
                     chain.doFilter(request, response);
                 }
             }
