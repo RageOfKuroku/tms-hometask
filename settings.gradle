@@ -1,4 +1,5 @@
 rootProject.name = 'lesson1'
+include 'ServletCheck'
 
 include 'ThreadsHometask'
 
