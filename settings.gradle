@@ -30,4 +30,7 @@ include 'CollectionsHometask'
 
 
 
+include 'HtmlHometask'
+include 'MyPage'
+include 'jsp'
 
