@@ -1,4 +1,5 @@
 rootProject.name = 'lesson1'
+include 'ServletCheck'
 
 include 'ThreadsHometask'
 
@@ -27,8 +28,7 @@ include 'LambdaHometask'
 include 'DateHometask'
 
 include 'CollectionsHometask'
-
-
+include 'Servlet'
 
 include 'HtmlHometask'
 include 'MyPage'
