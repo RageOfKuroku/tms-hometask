@@ -28,9 +28,13 @@ include 'LambdaHometask'
 include 'DateHometask'
 
 include 'CollectionsHometask'
+
+include 'HtmlHometask'
+
 include 'Servlet'
 
 include 'HtmlHometask'
 include 'MyPage'
 include 'jsp'
+
 
