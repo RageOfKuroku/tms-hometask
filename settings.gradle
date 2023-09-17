@@ -28,6 +28,10 @@ include 'LambdaHometask'
 include 'DateHometask'
 
 include 'CollectionsHometask'
+
+include 'HtmlHometask'
+
 include 'Servlet'
+
 
 
