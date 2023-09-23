@@ -9,9 +9,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-
-            <option value="$PROJECT_DIR$/ServletCheck" />
-
             <option value="$PROJECT_DIR$/ArraysHometask" />
             <option value="$PROJECT_DIR$/Check" />
             <option value="$PROJECT_DIR$/ClassHometask" />
@@ -24,21 +21,13 @@
             <option value="$PROJECT_DIR$/Interfaces_and_abstract_hometask" />
             <option value="$PROJECT_DIR$/JDBC" />
             <option value="$PROJECT_DIR$/LambdaHometask" />
+            <option value="$PROJECT_DIR$/Patterns" />
             <option value="$PROJECT_DIR$/PhoneHometask" />
             <option value="$PROJECT_DIR$/Servlet" />
+            <option value="$PROJECT_DIR$/ServletCheck" />
             <option value="$PROJECT_DIR$/StringHometask" />
             <option value="$PROJECT_DIR$/ThreadsHometask" />
-
-
-
-
-
-
-
-            <option value="$PROJECT_DIR$/StringHometask" />
-
             <option value="$PROJECT_DIR$/postgreSQL" />
-
           </set>
         </option>
       </GradleProjectSettings>
