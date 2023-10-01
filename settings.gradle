@@ -33,12 +33,16 @@ include 'HtmlHometask'
 
 include 'Servlet'
 
+include 'DecoratorHmtsk'
+
+
 include 'Patterns'
 
 
 include 'HtmlHometask'
 include 'MyPage'
 include 'jsp'
+
 
 
 
