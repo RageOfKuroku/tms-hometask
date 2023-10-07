@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
 
-<%@ page import="domain.Book" %>
+<%@ page import="hometask.org.hometask.domain.Book" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>

@@ -1,4 +1,4 @@
-package domain;
+package hometask.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

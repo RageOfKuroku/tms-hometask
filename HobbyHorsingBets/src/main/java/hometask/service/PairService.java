@@ -1,5 +1,5 @@
-package service;
-import domain.Pair;
+package hometask.service;
+import hometask.domain.Pair;
 
 //comment to commit
 public interface PairService {

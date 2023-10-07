@@ -1,11 +1,11 @@
-package service.implementations;
+package hometask.service.implementations;
 
-import additional.RandomFloat;
-import domain.Pair;
-import org.springframework.stereotype.Service;
+import hometask.additional.RandomFloat;
+import hometask.domain.Pair;
 
 
-@Service
+
+
 public class RaceServiceImpl {
 
     private final BalanceImpl balanceService;
@@ -16,6 +16,10 @@ public class RaceServiceImpl {
     public RaceServiceImpl(BalanceImpl balanceService, PairServiceImpl pairs) {
         this.balanceService = balanceService;
         this.pairs = pairs;
+    }
+
+    public void test() {
+        System.out.println("test");
     }
     public void startGame() {
         do {

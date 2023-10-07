@@ -1,13 +1,12 @@
-package service.implementations;
+package hometask.service.implementations;
 
-import additional.CreateScanner;
-import domain.UserBalance;
+import hometask.additional.CreateScanner;
+import hometask.domain.UserBalance;
+import hometask.service.Balance;
 import lombok.Getter;
-import org.springframework.stereotype.Service;
-import service.Balance;
 
 
-@Service
+
 @Getter
 
 public class BalanceImpl implements Balance {

@@ -1,20 +1,21 @@
-package config;
+package hometask.config;
 
-import domain.Horse;
-import domain.Horseman;
-import domain.Pair;
-import domain.UserBalance;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
-import service.implementations.BalanceImpl;
-import service.implementations.PairServiceImpl;
-import service.implementations.RaceServiceImpl;
+import hometask.domain.Horse;
+import hometask.domain.Horseman;
+import hometask.domain.Pair;
+import hometask.domain.UserBalance;
+import hometask.service.implementations.BalanceImpl;
+import hometask.service.implementations.PairServiceImpl;
+import hometask.service.implementations.RaceServiceImpl;
+import org.springframework.context.annotation.*;
 
 import java.util.List;
 
 
 @Configuration
+@ComponentScan("hometask.*")
+@EnableAspectJAutoProxy
+
 public class AppConfig {
     @Bean
     Horse horse1(){

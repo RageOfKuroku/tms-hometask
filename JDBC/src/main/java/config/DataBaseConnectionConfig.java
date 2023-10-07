@@ -1,4 +1,4 @@
-package config;
+package hometask.org.config;
 
 import org.postgresql.Driver;
 

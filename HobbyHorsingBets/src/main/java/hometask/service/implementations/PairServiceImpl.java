@@ -1,17 +1,16 @@
-package service.implementations;
+package hometask.service.implementations;
 
-import additional.CreateScanner;
-import domain.Pair;
+import hometask.additional.CreateScanner;
+import hometask.domain.Pair;
+import hometask.service.PairService;
 import lombok.Getter;
-import org.springframework.stereotype.Service;
-import service.PairService;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 @Getter
-@Service
+
 public class PairServiceImpl implements PairService {
     private final List<Pair> Pairs;
 

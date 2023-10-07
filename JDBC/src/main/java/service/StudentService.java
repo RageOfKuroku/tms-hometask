@@ -1,6 +1,6 @@
-package service;
+package hometask.org.service;
 
-import config.DataBaseConnectionConfig;
+import hometask.org.config.DataBaseConnectionConfig;
 
 import java.sql.*;
 import java.util.ArrayList;

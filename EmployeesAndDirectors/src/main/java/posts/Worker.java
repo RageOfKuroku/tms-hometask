@@ -1,7 +1,7 @@
 package posts;
 
-import service.Employee;
-import service.Post;
+import hometask.org.service.Employee;
+import hometask.org.service.Post;
 
 public class Worker extends Employee {
     public Worker(String name, String surname, int workExp) {

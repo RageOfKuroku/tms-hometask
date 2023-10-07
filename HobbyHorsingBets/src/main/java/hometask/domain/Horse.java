@@ -1,4 +1,4 @@
-package domain;
+package hometask.domain;
 
 import lombok.*;
 //comment to commit

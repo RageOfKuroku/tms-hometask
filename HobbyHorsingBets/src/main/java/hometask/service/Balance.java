@@ -1,4 +1,4 @@
-package service;
+package hometask.service;
 //comment to commit
 public interface Balance {
     void addMoney();

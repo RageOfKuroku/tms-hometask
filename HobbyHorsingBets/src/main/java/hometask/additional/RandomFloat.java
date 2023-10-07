@@ -1,10 +1,9 @@
-package additional;
+package hometask.additional;
 
-import org.springframework.stereotype.Service;
-import service.RandomService;
+import hometask.service.RandomService;
 
 import java.util.Random;
-@Service
+
 public class RandomFloat implements RandomService {
     @Override
     public float createRandom() {

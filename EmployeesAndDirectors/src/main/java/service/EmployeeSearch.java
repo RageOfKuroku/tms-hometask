@@ -1,4 +1,4 @@
-package service;
+package hometask.org.service;
 
 import posts.Director;
 

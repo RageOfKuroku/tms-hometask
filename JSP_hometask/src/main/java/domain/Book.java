@@ -1,4 +1,4 @@
-package domain;
+package hometask.org.domain;
 
 import lombok.*;
 
