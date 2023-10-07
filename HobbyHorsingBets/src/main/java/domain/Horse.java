@@ -1,7 +1,11 @@
 package domain;
 
 import lombok.*;
+
 //comment to commit
+
+
+
 @Getter
 @Setter
 @RequiredArgsConstructor

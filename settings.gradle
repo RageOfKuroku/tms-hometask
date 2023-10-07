@@ -28,6 +28,27 @@ include 'LambdaHometask'
 include 'DateHometask'
 
 include 'CollectionsHometask'
+
+include 'HtmlHometask'
+
 include 'Servlet'
+
 include 'HobbyHorsingBets'
+
+
+include 'HobbyHorsingBets'
+
+include 'DecoratorHmtsk'
+
+
+
+include 'Patterns'
+
+
+include 'HtmlHometask'
+include 'MyPage'
+include 'jsp'
+
+
+
 

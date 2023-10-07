@@ -3,11 +3,18 @@ package service.implementations;
 import additional.CreateScanner;
 import domain.UserBalance;
 import lombok.Getter;
+
 import org.springframework.stereotype.Service;
 import service.Balance;
 
 
 @Service
+@Getter
+
+
+import service.Balance;
+
+
 @Getter
 
 public class BalanceImpl implements Balance {

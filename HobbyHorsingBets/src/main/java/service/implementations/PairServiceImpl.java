@@ -3,7 +3,10 @@ package service.implementations;
 import additional.CreateScanner;
 import domain.Pair;
 import lombok.Getter;
+
 import org.springframework.stereotype.Service;
+
+
 import service.PairService;
 
 import java.util.ArrayList;
@@ -11,7 +14,9 @@ import java.util.Collections;
 import java.util.List;
 
 @Getter
+
 @Service
+
 public class PairServiceImpl implements PairService {
     private final List<Pair> Pairs;
 
