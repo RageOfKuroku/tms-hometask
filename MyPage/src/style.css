@@ -1,0 +1,184 @@
+.col1 {
+    background-color: #7C45D6;
+    height: 25%;
+}
+
+.col2 {
+    background-color: #946BD6;
+    height: 50%;
+    max-width: 100%;
+    padding: 15px;
+}
+
+.col3 {
+    background-color: #FFCB40;
+    height: 50%;
+}
+
+.container-fluid {
+    background-color: #946BD6;
+    align-items: center;
+    border-radius: 5px;
+}
+
+ul {
+    text-align: left;
+}
+
+.card-body {
+    background-color: #FFCB40;
+    border-radius: 5px;
+}
+
+.card {
+    padding: 15px;
+    background-color: #946BD6 !important;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0 !important;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.collapse {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FFCB40;
+    border-radius: 15px;
+}
+
+body {
+    background-image: url("Img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Roboto Thin", sans-serif;
+    font-style: italic;
+    font-weight: bolder !important;
+}
+
+h4 {
+    color: #FFCB40 !important;
+    font-style: italic;
+}
+
+h5 {
+
+    font-weight: bolder !important;
+}
+
+.justify-content-center {
+    padding: 15px;
+}
+
+a {
+    font-weight: bolder !important;
+    color: #FFCB40 !important;
+}
+
+p {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.pagination {
+
+    --bs-pagination-bg: #946BD6 !important;
+    --bs-pagination-color: #FFCB40 !important;
+}
+
+#head-name {
+    align-items: center;
+    padding-top: 65px;
+    padding-right: 120px;
+    color: #FFCB40 !important;
+}
+
+#head-img {
+    display: block;
+    max-width: 25%;
+    height: auto;
+    padding: 0 !important;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FFCB40;
+    border-radius: 15px;
+}
+
+#telegram {
+    max-width: 15%;
+    float: left;
+}
+
+#github {
+    max-width: 15%;
+    float: left;
+    margin-left: 10px;
+}
+
+#steam {
+    max-width: 15%;
+    float: left;
+    margin-left: 10px;
+}
+
+#discord {
+    max-width: 15%;
+    float: left;
+    margin-left: 5px;
+}
+
+.container {
+    padding-top: 20px;
+
+}
+
+.card {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.btn {
+    margin-top: auto;
+    background-color: #946BD6 !important;
+    border-color: #946BD6 !important;
+}
+
+.page-link {
+    border-color: #946BD6 !important;
+}
+
+@media (max-width: 991px) {
+    .collapse {
+        border: none !important;
+    }
+
+    #head-name {
+        padding: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 989px) {
+    #gura{
+        max-width: 100%;
+    }
+
+}
+
+
+
+
