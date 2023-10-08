@@ -35,6 +35,9 @@ include 'Servlet'
 
 include 'HobbyHorsingBets'
 
+
+include 'HobbyHorsingBets'
+
 include 'DecoratorHmtsk'
 
 
@@ -45,6 +48,7 @@ include 'Patterns'
 include 'HtmlHometask'
 include 'MyPage'
 include 'jsp'
+
 
 
 

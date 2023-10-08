@@ -22,7 +22,11 @@
 
             <option value="$PROJECT_DIR$/HobbyHorsingBets" />
 
+
+            <option value="$PROJECT_DIR$/HobbyHorsingBets" />
+
             <option value="$PROJECT_DIR$/HtmlHometask" />
+
 
             <option value="$PROJECT_DIR$/Interfaces_and_abstract_hometask" />
             <option value="$PROJECT_DIR$/JDBC" />
@@ -34,6 +38,9 @@
             <option value="$PROJECT_DIR$/ServletCheck" />
             <option value="$PROJECT_DIR$/StringHometask" />
             <option value="$PROJECT_DIR$/ThreadsHometask" />
+
+            <option value="$PROJECT_DIR$/postgreSQL" />
+
 
             <option value="$PROJECT_DIR$/postgreSQL" />
 

@@ -1,7 +1,7 @@
 import posts.Director;
 import posts.Worker;
-import service.EmployeeSearch;
-import service.InfoAboutDirector;
+import hometask.org.service.EmployeeSearch;
+import hometask.org.service.InfoAboutDirector;
 
 
 public class Main {

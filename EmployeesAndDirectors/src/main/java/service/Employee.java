@@ -1,4 +1,4 @@
-package service;
+package hometask.org.service;
 
 public abstract class Employee {
     public String name;

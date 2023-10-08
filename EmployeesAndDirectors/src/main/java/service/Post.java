@@ -1,4 +1,4 @@
-package service;
+package hometask.org.service;
 
 public enum Post {
     WORKER(1.5),

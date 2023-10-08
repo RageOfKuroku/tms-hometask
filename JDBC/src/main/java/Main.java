@@ -1,5 +1,5 @@
-import service.CityService;
-import service.StudentService;
+import hometask.org.service.CityService;
+import hometask.org.service.StudentService;
 
 import java.sql.*;
 

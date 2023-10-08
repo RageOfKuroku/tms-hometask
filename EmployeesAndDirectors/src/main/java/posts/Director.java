@@ -1,7 +1,7 @@
 package posts;
 
-import service.Employee;
-import service.Post;
+import hometask.org.service.Employee;
+import hometask.org.service.Post;
 
 public class Director extends Employee {
     public Employee[] employees = new Employee[15];
