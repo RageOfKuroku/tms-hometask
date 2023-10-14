@@ -45,7 +45,5 @@ include 'Patterns'
 include 'HtmlHometask'
 include 'MyPage'
 include 'jsp'
-
-
-
+include 'SpringWebF'
 
