@@ -23,10 +23,10 @@ First page - Home JSP. USING SPRING<br>
 
 <form action="/home" method="post">
     <div>
-        <input type="text" name="name" class="input-field ${empty param.name ? 'error' : ''}" placeholder="name of testItem">
+        <input type="text" name="name" class="input-field" placeholder="name of testItem"> ${nameError}
     </div><br>
     <div>
-        <input type="text" name="secondName" class="input-field" placeholder="number of testItem">
+        <input type="text" name="secondName" class="input-field" placeholder="number of testItem"> ${secondNameError}
     </div><br>
     <input type="submit" value="Add">
 </form>
@@ -34,10 +34,9 @@ First page - Home JSP. USING SPRING<br>
 Имя | Номер
 <ul>
 
-    <c:forEach var="test" items="${test}">
-        <li>${test.name} | ${test.secondName}</li>
+    <c:forEach var="test1" items="${test}">
+        <li>${test1.name} | ${test1.secondName}</li>
     </c:forEach>
-
 
 </ul>
 </body>

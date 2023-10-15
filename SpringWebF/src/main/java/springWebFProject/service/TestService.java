@@ -2,9 +2,11 @@ package springWebFProject.service;
 
 import springWebFProject.Test;
 
+import java.util.List;
+
 public interface TestService {
 
-    public Object getTest();
+    public List<Test> getTest();
 
     void save(Test test);
 }

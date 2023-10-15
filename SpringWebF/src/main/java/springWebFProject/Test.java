@@ -13,10 +13,11 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Test {
-    @NotNull
-    @NotBlank
+
+    @NotBlank(message = "Fill with letters")
     private String name;
-    @NotNull
+
+    @NotNull(message = "Fill with numbers")
     @Min(10) @Max(10000)
     private Integer secondName;
 
