@@ -3,13 +3,18 @@ package domain;
 import lombok.*;
 
 import java.util.UUID;
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Book {
-    private UUID id;
-    private String Title;
-    private String description;
-    private Integer pages;
-    private String author;
+
+   private UUID id;
+
+   private String Title;
+   private String description;
+   private Integer pages;
+   @Getter@Setter
+   private String author;
+
 }
