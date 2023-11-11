@@ -7,10 +7,17 @@ import project.entity.TaskEntity;
 import project.entity.UserEntity;
 import project.service.additions.Status;
 
+
+import project.service.interfaces.DAO;
+
 import javax.persistence.Query;
 import java.util.UUID;
 
+
 public class TaskImpl {
+
+public class TaskImpl implements DAO<TaskEntity> {
+
 
     public TaskEntity create(String name, String description, Status status, UserEntity user) {
         Session session = HibernateConfig.create();
@@ -39,14 +46,25 @@ public class TaskImpl {
         session.close();
     }
 
+
     public static void getTaskById(String id) {
+
+    @Override
+    public TaskEntity getById(String id) {
+
         Session session = HibernateConfig.create();
         Transaction transaction = session.beginTransaction();
         TaskEntity taskEntity = session.find(TaskEntity.class, UUID.fromString(id));
         System.out.println(taskEntity);
         transaction.commit();
         session.close();
+
     }
+
+
+        return taskEntity;
+    }
+    @Override
 
     public void delete(TaskEntity task){
         Session session = HibernateConfig.create();
