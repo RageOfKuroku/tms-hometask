@@ -16,8 +16,13 @@ public class Main {
         TaskImpl ti = new TaskImpl();
         UserImpl ui = new UserImpl();
 
+
+        UserEntity egor = ui.createUser("Egor", new Date(), Sex.MALE, Type.ADMIN);
+        UserEntity vladimeow = ui.createUser("Vladimeow", new Date(), Sex.WALMART_BAG, Type.SUPPORT);
+
         UserEntity egor = ui.create("Egor", new Date(), Sex.MALE, Type.ADMIN);
         UserEntity vladimeow = ui.create("Vladimeow", new Date(), Sex.WALMART_BAG, Type.SUPPORT);
+
 
         TaskEntity taskEntity = ti.create("Pomitsya", "Pomoysya", Status.IN_PROGRESS, egor);
         TaskEntity taskEntity1 = ti.create("Popit", "drink water", Status.NEW, vladimeow);

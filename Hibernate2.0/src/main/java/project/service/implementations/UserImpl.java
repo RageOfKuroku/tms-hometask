@@ -8,15 +8,24 @@ import project.entity.UserEntity;
 import project.service.additions.Sex;
 import project.service.additions.Status;
 import project.service.additions.Type;
+
+
 import project.service.interfaces.DAO;
+
 
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+
+public class UserImpl {
+
+    public UserEntity createUser(String name, Date dateOfBirth, Sex sex, Type type) {
+
 public class UserImpl implements DAO<UserEntity> {
 
     public UserEntity create(String name, Date dateOfBirth, Sex sex, Type type) {
+
         Session session = HibernateConfig.create();
         Transaction transaction = session.beginTransaction();
         UserEntity user = UserEntity.builder()
@@ -31,7 +40,11 @@ public class UserImpl implements DAO<UserEntity> {
         return user;
     }
 
+
+
+
     @Override
+
     public void delete(UserEntity userEntity) {
         Session session = HibernateConfig.create();
         Transaction transaction = session.beginTransaction();
@@ -41,7 +54,11 @@ public class UserImpl implements DAO<UserEntity> {
 
     }
 
+
+    public void delete(String uuid) {
+
     public void deleteWithId(String uuid) {
+
         Session session = HibernateConfig.create();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("delete from UserEntity as ue where ue.user_id =: user_uuid");
@@ -50,15 +67,23 @@ public class UserImpl implements DAO<UserEntity> {
         transaction.commit();
         session.close();
     }
+
+
+    public static void getUserById(String id) {
+
     @Override
     public UserEntity getById(String id) {
+
         Session session = HibernateConfig.create();
         Transaction transaction = session.beginTransaction();
         UserEntity userEntity = session.find(UserEntity.class, UUID.fromString(id));
         System.out.println(userEntity);
         transaction.commit();
         session.close();
+
+
         return userEntity;
+
     }
 
     public List<UserEntity> returnByStatus(Status status){
