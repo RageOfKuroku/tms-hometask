@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<form action="/home/save" method="post">
+    Название фильма - <input type="text" placeholder="Название фильма" name="filmName"><br>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1"></label><br>
+        Жанр фильма - <select class="form-control" id="exampleFormControlSelect1" name="genre">
+        <option value="HORROR">Horror</option>
+        <option value="COMEDY">Comedy</option>
+        <option value="ACTION">Action</option>
+    </select>
+    </div>
+    <br>
+    Год выпуска - <input type="text" placeholder="Год" name="dateOfRelease"><br><br>
+    Рейтинг - <input type="text" placeholder="Ваша оценка" name="rating"><br><br>
+    <button type="submit">Save</button>
+    <br>
+    <hr>
+</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Фильм</th>
+        <th scope="col">Жанр</th>
+        <th scope="col">Дата выхода</th>
+        <th scope="col">Рейтинг</th>
+        <th scope="col">Новый рейтинг</th>
+    </tr>
+    </thead>
+    <tbody th:each="film, count: ${films}">
+    <tr>
+        <th scope="row" th:text="${count.count}"></th>
+        <td th:text="${film.getFilmName()}"/>
+        <td th:text="${film.getGenre()}"/>
+        <td th:text="${film.getDateOfRelease()}"/>
+        <form  th:action="@{/home/update/{id}(id = ${film.getId()})}" method="post">
+            <td th:text="${film.getRating()}">
+            <td><label>
+                <input type="text" name="newRatingForUpdate">
+            </label></td>
+            <td><button type="submit" >Обновить</button></td>
+        </form>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>
