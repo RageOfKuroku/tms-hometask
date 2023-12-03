@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Data
@@ -22,20 +21,19 @@ public class FilmEntity {
     private Integer id;
     @Column(name = "Film")
     @NotBlank
-    @NotEmpty
-    private String filmName;
+
+    private String title;
     @Enumerated(value = EnumType.STRING)
     @Column(name = "Genre")
     @NotBlank
-    @NotEmpty
+
     private Genre genre;
     @Column(name = "Release date")
     @NotBlank
-    @NotEmpty
+
     private String dateOfRelease;
     @Column(name = "Rating")
     @NotBlank
-    @NotEmpty
     @Min(1)
     @Max(10)
     private Float rating;

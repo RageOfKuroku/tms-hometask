@@ -38,7 +38,7 @@
     <tbody th:each="film, count: ${films}">
     <tr>
         <th scope="row" th:text="${count.count}"></th>
-        <td th:text="${film.getFilmName()}"/>
+        <td th:text="${film.getTitle()}"/>
         <td th:text="${film.getGenre()}"/>
         <td th:text="${film.getDateOfRelease()}"/>
         <form  th:action="@{/home/update/{id}(id = ${film.getId()})}" method="post">
@@ -48,9 +48,21 @@
             </label></td>
             <td><button type="submit" >Обновить</button></td>
         </form>
-
     </tr>
     </tbody>
+    <form action="home/search" method="post">
+        <input type="text" name="title" placeholder="Название">
+        <select class="form-control" id="exampleFormControlSelect11" name="genre">
+            <option value="HORROR">Horror</option>
+            <option value="COMEDY">Comedy</option>
+            <option value="ACTION">Action</option>
+        </select>
+        <input type="number" name="ratingFrom" placeholder="Рейтинг от">
+        <input type="number" name="ratingTo" placeholder="Рейтинг до">
+        <button type="submit">Поиск</button>
+    </form>
+
+
 </table>
 
 </body>
