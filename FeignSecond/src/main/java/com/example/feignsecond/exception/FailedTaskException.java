@@ -1,4 +1,4 @@
-package com.example.rest.exception;
+package com.example.feignsecond.exception;
 
 import lombok.Getter;
 import lombok.Setter;
