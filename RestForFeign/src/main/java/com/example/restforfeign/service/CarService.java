@@ -1,6 +1,7 @@
-package com.example.rest.service;
+package com.example.restforfeign.service;
 
-import com.example.rest.dto.CarDto;
+
+import com.example.restforfeign.dto.CarDto;
 
 import java.util.List;
 
