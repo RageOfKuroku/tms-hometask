@@ -1,4 +1,4 @@
-package com.example.rest.entity;
+package com.example.restforfeign.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,8 +11,8 @@ public class CarEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "name", nullable = false)
+
     private String name;
-    @Column(name = "brand", nullable = false)
+
     private String brand;
 }

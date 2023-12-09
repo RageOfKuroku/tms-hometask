@@ -1,11 +1,12 @@
-package com.example.rest.impl;
+package com.example.restforfeign.impl;
 
-import com.example.rest.dto.CarDto;
-import com.example.rest.entity.CarEntity;
-import com.example.rest.exception.FailedTaskException;
-import com.example.rest.mapper.CarMapper;
-import com.example.rest.repos.CarRepository;
-import com.example.rest.service.CarService;
+
+import com.example.restforfeign.dto.CarDto;
+import com.example.restforfeign.entity.CarEntity;
+import com.example.restforfeign.exception.FailedTaskException;
+import com.example.restforfeign.mapper.CarMapper;
+import com.example.restforfeign.repos.CarRepository;
+import com.example.restforfeign.service.CarService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

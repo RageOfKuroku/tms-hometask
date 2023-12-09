@@ -1,4 +1,4 @@
-package com.example.rest.dto;
+package com.example.restforfeign.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
