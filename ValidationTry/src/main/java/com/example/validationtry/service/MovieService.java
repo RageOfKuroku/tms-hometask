@@ -1,6 +1,6 @@
-package com.example.validation.service;
+package com.example.validationtry.service;
 
-import com.example.validation.dto.Movie;
+import com.example.validationtry.dto.Movie;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class MovieService {
     }
 
     public List<Movie> getAllMovies() {
-        return new ArrayList<>(movies);
+        return movies;
     }
 }
 
