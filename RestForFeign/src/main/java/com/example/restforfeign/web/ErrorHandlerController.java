@@ -11,7 +11,7 @@ public class ErrorHandlerController {
 
     @ExceptionHandler(FailedTaskException.class)
     public ResponseEntity<ExInfo> handler(FailedTaskException exc){
-        String errorMessage = exc.getErrorMessage();
+        String errorMessage = exc.getMessage();
         ExInfo details = ExInfo.builder()
                 .serviceName("user-service")
                 .message(errorMessage)
