@@ -22,4 +22,9 @@ public class HomeController {
     public String protectedPage(){
         return "protected";
     }
+
+    @GetMapping("/user")
+    public String userPage(){
+        return "user";
+    }
 }
