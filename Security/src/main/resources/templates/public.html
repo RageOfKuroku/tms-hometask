@@ -6,9 +6,34 @@
 </head>
 <body>
 Это публичная страница
-<br>
+<br><br>
 <a href="private.html">На приватную страницу</a>
 <br>
 <a href="protected.html">На защищённую страницу страницу</a>
+<br><br><br><br>
+Registration
+<form method="post" th:action="@{/register}">
+
+    <label><input type="text" name="username"></label><br>
+    <label><input type="password" name="password"></label><br>
+    <input type="submit" th:value="Add">
+
+</form>
+<br><br>
+Login
+<form method="post" th:action="@{/login}">
+
+    <label><input type="text" name="login"></label><br>
+    <label><input type="password" name="cred"></label><br>
+    <input type="submit" th:value="Login">
+
+</form>
+<br><br>
+<a>
+Logout
+<form method="post" th:action="@{/logout}">
+    <input type="submit" th:value="Logout">
+</form>
+</a>
 </body>
 </html>
