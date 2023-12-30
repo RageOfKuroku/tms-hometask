@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/token_hmtsk
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+project:
+  secretKey : dzvaabsetosamodelalosinerabotalo
