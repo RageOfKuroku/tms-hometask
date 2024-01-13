@@ -18,6 +18,6 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    String name;
+    String title;
     String description;
 }

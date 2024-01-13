@@ -1,38 +1,54 @@
 package com.example.secondresttest.test;
 
-import com.example.secondresttest.entity.Order;
+import com.example.secondresttest.dto.OrderDto;
 import com.example.secondresttest.service.OrderService;
 import com.example.secondresttest.web.OrderController;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-@SpringBootTest
-public class OrderControllerTest {
-
+@WebMvcTest(OrderController.class)
+class OrderControllerTest {
     @MockBean
-    private OrderService orderService;
+    OrderService service;
+
+    @Autowired
+    MockMvc mockMvc;
+
+    @Autowired
+    ObjectMapper mapper;
 
     @Test
-    public void testCreateOrder() {
-        Order order = new Order();
-        order.setName("Test order");
-        order.setDescription("This is a test order.");
+    void saveOrder() throws Exception {
+        // Given
+        OrderDto order = OrderDto.builder()
+                .title("phone")
+                .description("new phone for you")
+                .build();
 
-        Order savedOrder = new Order();
-        savedOrder.setId(1);
-        savedOrder.setName(order.getName());
-        savedOrder.setDescription(order.getDescription());
+        Mockito.when(service.save(order)).thenReturn(order);
+        String json = mapper.writeValueAsString(order);
 
-        Mockito.when(orderService.save(order)).thenReturn(savedOrder);
-
-        OrderController orderController = new OrderController(orderService);
-        Order result = orderController.createOrder(order).getBody();
-
-        assertEquals(savedOrder, result);
-        Mockito.verify(orderService).save(order);
+        // When & Then
+        mockMvc.perform(post("/save")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON)
+                        .content(json))
+                .andDo(print())
+                .andExpect(jsonPath("$.title", is(order.getTitle())))
+                .andExpect(jsonPath("$.description", is(order.getDescription())));
     }
 }
+
+
+
